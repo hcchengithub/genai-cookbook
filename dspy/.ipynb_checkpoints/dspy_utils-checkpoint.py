@@ -156,8 +156,7 @@ class COT(dspy.Module):
     """Chain of Thought Module"""
     def __init__(self):
         super().__init__()
-      # self.cot = dspy.ChainOfThought(ChainOfThoughtSignature, max_iters=5) 會出錯
-        self.cot = dspy.ChainOfThought(ChainOfThoughtSignature)
+        self.cot = dspy.ChainOfThought(ChainOfThoughtSignature, max_iters=5)
 
     def forward(self, problem_text: str):
         return self.cot(problem_text=problem_text)
