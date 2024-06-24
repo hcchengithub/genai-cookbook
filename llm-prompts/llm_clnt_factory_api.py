@@ -65,7 +65,7 @@ if __name__ == "__main__":
     client_factory.register_client('openai', OpenAI)
     client_type = 'openai'
     client_kwargs = {"api_key": 
-                        "sk-1234567890abcdef1234567890abcdef",
+                        "",
                     "base_url": 
                         "https://api.openai.com",}
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     client_factory.register_client('anthropic', Anthropic)
     client_type = 'anthropic'
     client_kwargs = {"api_key": 
-                        "sk-1234567890abcdef1234567890abcdef",}
+                        "",}
                     
     client = client_factory.create_client(client_type, **client_kwargs)
     print(client)
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     client_type = 'google'
     client_kwargs = {"model_name": "gemini-1.5-flash",
                      "generation_config": {"temperature": 0.8,
-                                          "api_key": "sk-1234567890abcdef1234567890abcdef",},
+                                          "api_key": "",},
                      "system_instruction": "Please generate a polite to the user prompt. Do not make any answer",
     }
 
